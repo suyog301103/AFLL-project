@@ -43,6 +43,9 @@ def p_def(p):
 def p_string(p):
     'expression : STRING'
 
+def p_id(p):
+    'expression : ID'
+
 def p_expression_plus(p):
     'expression : expression PLUS term'
     p[0] = p[1] + p[3]

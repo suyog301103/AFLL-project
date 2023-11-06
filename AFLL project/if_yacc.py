@@ -8,14 +8,6 @@ def p_statement(p):
     statement : elif
     statement : else'''
 
-# perl
-def p_assign(p):
-    '''assign : DOLLAR ID EQUAL expression SEMICOLON 
-    | DOLLAR ID EQUAL MINUS expression SEMICOLON
-    | DOLLAR ID EQUAL PLUS expression SEMICOLON'''
-    # 'assign : DOLLAR ID EQUAL expression SEMICOLON'
-    # print(p[4])
-
 
 # Python 
 def p_assign(p):
@@ -36,6 +28,9 @@ def p_else(p):
 
 def p_string(p):
     'expression : STRING'
+
+def p_id(p):
+    'expression : ID'
 
 def p_expression_plus(p):
     'expression : expression PLUS term'
